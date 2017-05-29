@@ -1,0 +1,17 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
+@{
+    ViewData["Title"] = Localizer["TITLE_HomePage"];
+}
+
+<div class="jumbotron" >
+    <h1>@Localizer["lblSystemName"]</h1>
+    <row>
+       <div>
+           <p>
+               <i>... ERP System made easy!</i>
+           </p>
+       </div>
+    </row>
+</div>
