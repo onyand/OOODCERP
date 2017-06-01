@@ -41,6 +41,9 @@ width: 100%;
 #SystemMenu ul li:hover > ul {
 display: block;
 }
+#SystemMenu ul > li > ul > li {
+width: 100%;
+}
 
 #SystemMenu ul > li > ul > li:hover {
 background-color: Menu;
@@ -53,16 +56,16 @@ color: black;
 }
 
 #SystemMenu ul > li > ul > li a:hover {
-    color: black;
+color: black;
 }
-    #SystemMenu ul > li > ul > li > ul {
-        position: relative;
-        margin-left: 25%;
-        width:100%;
-    }
-        #SystemMenu ul > li > ul > li > ul > li {
-            position: relative;
-            padding:10px;
-            width:100%;
-        }
+#SystemMenu ul > li > ul > li > ul {
+position: relative;
+margin-left: 25%;
+width:100%;
+}
+#SystemMenu ul > li > ul > li > ul > li {
+    position: relative;
+    padding:10px;
+    width:100%;
+}
   
