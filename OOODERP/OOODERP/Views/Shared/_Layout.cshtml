@@ -11,7 +11,7 @@
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
-        <link rel="stylesheet" href="~/css/mainmenu.css"/>
+        <link rel="stylesheet" href="~/css/mainmenu.css" />
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     </environment>
     <environment names="Staging,Production">
@@ -36,74 +36,75 @@
                 </button>
                 <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">@Localizer["Title"]</a>
             </div>
-
+            <!--
             <div>
-                <ul class="nav navbar-nav floatright">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">@Localizer["lblHome"]</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">@Localizer["lblAbout"]</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">@Localizer["lblContact"]</a></li>
-                </ul>
-            </div>   
+                    <ul class="nav navbar-nav floatright">
+                        <li><a asp-area="" asp-controller="Home" asp-action="Index">@Localizer["lblHome"]</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="About">@Localizer["lblAbout"]</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Contact">@Localizer["lblContact"]</a></li>
+                    </ul>   
+            </div>
+            -->
         </div>
     </nav>
-    <nav id="navMainMenu">
-        <ul style="padding-left:25%">
+    <nav id="SystemMenu">
+        <ul>
             <li id="Administration">
-                <a href="#Administration" class="adminMenu">@Localizer["lblSystemAdministration"]</a>
+                <a href="#Administration" class="adminMenu">Administration</a>
                 <ul>
-                    <li id="UserMaintenance"><a href="#UserMaintenance">@Localizer["lblUserAdministration"]</a></li>
-                    <li id="DeviceMaintenance"><a href="#DeviceMaintenance">@Localizer["lblDeviceMaintenance"]</a></li>
-                    <li id=SystemConfiguration><a href="#SystemConfiguration">@Localizer["lblSystemConfiguration"]</a></li>
+                    <li id="User"><a href="#User">User</a></li>
+                    <li id="Device"><a href="#Device">Device</a></li>
+                    <li id=System><a href="#System">System</a></li>
                 </ul>
             </li>
             <li id="MasterInformation">
-                <a href="#MasterInformation">@Localizer["lblMasterInformation"]</a>
+                <a href="#MasterInformation">Master Information</a>
                 <ul>
-                    <li id="Client"><a href="#Client">@Localizer["lblClient"]</a></li>
-                    <li id="Customers"><a href="#Customers">@Localizer["lblCustomers"]</a></li>
-                    <li id="Products"><a href="#Products">@Localizer["lblProducts"]</a></li>
-                    <li id="Location"><a href="#Location">@Localizer["lblLocation"]</a></li>
-                    <li id="Vendors"><a href="#Vendors">@Localizer["lblVendors"]</a></li>
-                    <li id="Financial"><a href="#Financial">@Localizer["lblFinancial"]</a></li>
+                    <li id="Client">
+                        <a href="#Client">Client</a>
+                        <ul>
+                            <li><a href="#list1">List 1</a></li>
+                            <li><a href="#list2">List 2</a></li>
+                        </ul>
+                    </li>
+                    <li id="Customers"><a href="#Customers">Customers</a></li>
+                    <li id="Products"><a href="#Products">Products</a></li>
+                    <li id="Location"><a href="#Location">Location</a></li>
+                    <li id="Vendors"><a href="#Vendors">Vendors</a></li>
+                    <li id="Financial"><a href="#Financial">Financial</a></li>
                 </ul>
             </li>
             <li id="OperationSetup">
-                <a href="#OperationSetup">@Localizer["lblOperationsSetup"]</a>
+                <a href="#OperationSetup">Operations Setup</a>
                 <ul>
-                    <li id="Price"><a href="#Price">@Localizer["lblPrice"]</a></li>
-                    <li id="Promotions"><a href="#Promotions">@Localizer["lblPromotions"]</a></li>
-                    <li id="CreditTerms"><a href="#CreditTerms">@Localizer["lblCreditTerms"]</a></li>
+                    <li id="Price"><a href="#Price">Price</a></li>
+                    <li id="Promotions"><a href="#Promotions">Promotions</a></li>
+                    <li id="CreditTerms"><a href="#CreditTerms">Credit Terms</a></li>
+                    <li id="Price"><a href="#Price">Price</a></li>
                 </ul>
             </li>
             <li id="TransactionProcessing">
-                <a href="#TransactionProcessing">@Localizer["lblTransactionProcessing"]</a>
+                <a href="#TransactionProcessing">Transaction Processing</a>
                 <ul>
-                    <li id="Sales"><a href="#Sales">@Localizer["lblSales"]</a></li>
+                    <li id="Sales"><a href="#Sales">Sales</a></li>
                 </ul>
             </li>
-            <li id="HelpSupport"><a href="#HelpSupport">@Localizer["lblHelpandSupport"]</a></li>
+            <li id="HelpSupport"><a href="#HelpSupport">Help and Support</a></li>
         </ul>
     </nav>
-    <!-- Sidebar -->
-    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
-        <h3 class="w3-bar-item">Menu</h3>
-        <a href="#" class="w3-bar-item w3-button">Link 1</a>
-        <a href="#" class="w3-bar-item w3-button">Link 2</a>
-        <a href="#" class="w3-bar-item w3-button">Link 3</a>
-    </div>
-    <div class="container body-content" style="margin-left:25%">
+    <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
             <div class="row">
-               <div class="col=sm-6">
-                   <p>&copy; 2017 - @Localizer["Title"]</p>
-               </div>
+                <div class="col=sm-6">
+                    <p>&copy; 2017 - @Localizer["Title"]</p>
+                </div>
                 <div class="col-sm-6 text-right">
-                    @await  Html.PartialAsync("_SelectLanguagePartial")
+                    @await Html.PartialAsync("_SelectLanguagePartial")
                 </div>
             </div>
-            
+
         </footer>
     </div>
 

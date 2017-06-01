@@ -1,46 +1,68 @@
-﻿#navMainMenu ul {
-	list-style: none;
-	background-color:black;
-	padding:0;
-	margin:0;
-	overflow:hidden;
+﻿#SystemMenu {
+background-color: #222;
 }
-#navMainMenu ul li {
-	display:inline-block;
-	padding:3px;
+
+#SystemMenu ul {
+list-style: none;
 }
-#navMainMenu ul li a {
-	display:block;
-	color:white;
-	text-decoration:none;
-	padding:5px;	
+
+#SystemMenu ul > li {
+position: relative;
+display: inline-block;
+padding:10px;
+line-height: 20px;
 }
-#navMainMenu ul ul {
-	position:absolute;
-	background-color:purple;
-	display:none;
-	width:160px;
-	background-color:#f9f9f9;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    	z-index: 1;
+
+#SystemMenu ul li a {
+color: #9d9d9d;
+text-decoration: none;
 }
-#navMainMenu ul ul li {
-	width:100%;
-	padding:5px; 
+
+#SystemMenu ul > li:hover {
+background-color: red;
 }
-#navMainMenu ul ul li a {
-	width:100%;
-	padding:5px;
-	color:black; 
+
+#SystemMenu ul li a:hover {
+color: white;
 }
-#navMainMenu ul li:hover {
-	background-color:red;
+
+#SystemMenu ul li ul {
+display: none;
+position: absolute;
+left: 0;
+padding-left: 0;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+background-color: white;
+color: MenuText;
+width: 100%;
 }
-#navMainMenu ul li:hover > ul {
-	display:block;
-	color:white;
-	text-decoration:none;	
+
+#SystemMenu ul li:hover > ul {
+display: block;
 }
-.floatright {
-    float:right;
+
+#SystemMenu ul > li > ul > li:hover {
+background-color: Menu;
+color: black;
+width: 100%;
 }
+
+#SystemMenu ul > li > ul > li a {
+color: black;
+}
+
+#SystemMenu ul > li > ul > li a:hover {
+    color: black;
+}
+    #SystemMenu ul > li > ul > li > ul {
+        position: relative;
+        margin-left: 25%;
+        width:100%;
+    }
+        #SystemMenu ul > li > ul > li > ul > li {
+            position: relative;
+            padding:10px;
+            width:100%;
+        }
+  
